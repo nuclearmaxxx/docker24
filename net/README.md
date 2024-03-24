@@ -1,3 +1,5 @@
-# nuget.config
-Использовать в сети НСПК для доступа к внешним ресурсам nuget.org при сборке приложения на .NET.
-При сборке приложения из домашней сети (в "голом" интернете) данный файл не требуется.
+sudo docker build -t dotnet_l2 .
+
+sudo docker run -d -p 5000:80  dotnet_l2:latest
+
+curl -v http://localhost:5000/weatherforecast
