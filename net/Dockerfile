@@ -6,6 +6,6 @@ RUN ["dotnet","build","WebApplication_DIT_Docker.sln"]
 FROM mcr.microsoft.com/dotnet/aspnet:6.0-jammy
 WORKDIR /apps
 COPY --from=build /work/WebApplication_DIT_Docker/bin/Debug/net6.0/* /apps
-EXPOSE 5000
+EXPOSE 80
 ENTRYPOINT ["dotnet","WebApplication_DIT_Docker.dll"]
 
