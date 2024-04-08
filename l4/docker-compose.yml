@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web_app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: dotnet_compose:latest
+    container_name: dotnet_app_compose
+    ports:
+      - 5000:80
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G    
